@@ -51,6 +51,10 @@ width:90%;
 max-width:500px;
 margin:0 auto;
 border:2px solid #a8d8ff;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
 }
 
 #page2 .container{max-width:550px;}
@@ -92,8 +96,16 @@ h2{font-size:1.5rem;}
 p{font-size:1rem;}
 }
 
-p{margin-bottom:1.5em;line-height:1.6;font-size:1.2rem;white-space:nowrap;}
+/* ===== FIX TEXT QUESTION ===== */
+p{
+margin-bottom:1.5em;
+line-height:1.6;
+font-size:1.2rem;
+white-space:normal;
+word-break:break-word;
+}
 
+/* ===== IMAGE ===== */
 .image-container{
 width:180px;height:180px;margin:20px auto;
 border-radius:15px;overflow:hidden;
@@ -123,12 +135,13 @@ background-color:#a8d8ff;
 
 .image-container:hover img{transform:scale(1.05);}
 
+/* ===== BUTTON ===== */
 .btn{
 background-color:#a8d8ff;
 color:white;
 border:none;
 padding:10px 25px;
-margin:10px;
+margin:8px auto;
 border-radius:50px;
 font-size:1.1rem;
 font-weight:600;
@@ -138,7 +151,10 @@ position:relative;
 overflow:hidden;
 box-shadow:0 5px 15px rgba(168,216,255,.4);
 font-family:'Bubblegum Sans',cursive;
-white-space:nowrap;
+display:block;
+width:100%;
+max-width:260px;
+white-space:normal;
 }
 
 @media(max-width:480px){
@@ -162,12 +178,14 @@ box-shadow:0 8px 20px rgba(168,216,255,.6);
 .btn:active{transform:translateY(1px);}
 .btn-green{background-color:#77e0cb;}
 
+/* ===== MESSAGE ===== */
 .message-text{
 padding:10px;border-radius:10px;
 min-height:100px;margin-bottom:15px;
 text-align:left;line-height:1.6;
 }
 
+/* ===== ANIMATION ===== */
 .bounce{animation:bounce .5s;}
 .shake{animation:shake .5s;}
 .pulse{animation:pulse .5s;}
@@ -188,6 +206,7 @@ text-align:left;line-height:1.6;
 100%{transform:scale(1);}
 }
 
+/* ===== AUDIO BTN ===== */
 .audio-btn{
 position:fixed;bottom:30px;right:30px;
 width:50px;height:50px;
@@ -201,6 +220,7 @@ z-index:100;transition:.3s;
 .audio-btn:hover{transform:scale(1.1);}
 .audio-btn i{color:white;font-size:1.5rem;}
 
+/* ===== MODAL ===== */
 .modal{
 position:fixed;top:0;left:0;right:0;bottom:0;
 background-color:rgba(0,0,0,.7);
@@ -230,6 +250,7 @@ cursor:pointer;
 color:#5bb6ff;
 }
 
+/* ===== HEARTS ===== */
 .hearts{
 position:absolute;width:100%;height:100%;
 pointer-events:none;z-index:-1;
@@ -249,6 +270,7 @@ animation:float 6s linear infinite;
 100%{transform:translateY(-100vh) rotate(360deg);opacity:0;}
 }
 
+/* ===== MESSAGE BOX ===== */
 .message-background{
 background-color:rgba(255,255,255,.8);
 border:5px solid #a8d8ff;
@@ -269,14 +291,14 @@ display:block;margin-bottom:20px;
 font-size:2.2rem;
 color:#5bb6ff;
 text-shadow:2px 2px 0 #fff;
-white-space:nowrap;
+white-space:normal;
 }
 
 .sad-text{
 text-align:center;margin-top:15px;
 font-size:1.5rem;
 color:#5bb6ff;
-white-space:nowrap;
+white-space:normal;
 }
 
 @media(max-width:480px){
